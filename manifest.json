@@ -21,7 +21,7 @@
 
     "browser_action": {
         "default_icon": "images/House20.png",
-        "default_title": "House Helper 房屋幫手",
+        "default_title": "HouseHelper 房屋幫手",
         "default_popup" : "popup.html"
     },
 
