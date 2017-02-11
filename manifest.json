@@ -1,0 +1,52 @@
+{
+    "name": "House Helper",
+    "version": "0.1",
+    "description": "Help you finding and rent the good house!",
+    "permissions": [
+        "https://rent.591.com.tw/rent-detail-*",
+        "tts",
+        "tabs",
+        "activeTab"
+    ],
+
+    "background": {
+        "scripts": [
+            "js/main.js"
+        ]
+    },
+
+    "web_accessible_resources": [
+        "js/disqus.js"
+    ],
+
+    "browser_action": {
+        "default_icon": "images/House20.png",
+        "default_title": "House Helper 房屋幫手",
+        "default_popup" : "popup.html"
+    },
+
+    "options_page": "index.html",
+
+    "minimum_chrome_version": "14",
+
+    "content_scripts": [{
+        "matches": [
+            "https://rent.591.com.tw/rent-detail-*"
+        ],
+        "all_frames": true,
+        "js": [
+            "js/jquery.min.js",
+            "js/embed.js",
+            "js/content_script.js"
+        ]
+    }],
+
+    "icons": {
+        "16": "images/House16.png",
+        "48": "images/House48.png",
+        "128": "images/House128.png",
+        "256": "images/House256.png"
+    },
+
+  "manifest_version": 2
+}
